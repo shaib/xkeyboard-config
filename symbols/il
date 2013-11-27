@@ -14,19 +14,16 @@ xkb_symbols "basic" {
     name[Group1]= "Hebrew";
     key.type[Group1] = "FOUR_LEVEL_SEMIALPHABETIC";
 
-    key <AD01> { [ slash,	Q,	U05C2	]	};  // Sin Dot
-    key <AD02> { [ apostrophe,	W,	U05C1	]	};  // Shin Dot
-    key <AD03> { [ hebrew_qoph,	E,	U05B8	]	};  // Qamats
-    key <AD04> { [ hebrew_resh,	R,	U05B3	]	};  // Hataf Qamats
-    key <AD05> { [ hebrew_aleph,T		]       };
-    key <AD06> { [ hebrew_tet,	Y,	U05F0	]       };  // Yiddish Double Vav
-    key <AD07> { [ hebrew_waw,	U,	U05B9	]       };  // Holam
-    key <AD08> { [ hebrew_finalnun,	I	]       };
-    key <AD09> { [ hebrew_finalmem,	O	]       };
-    key <AD10> { [ hebrew_pe,	P,	U05B7	]	};  // Patah
-    key <AD11> { [ bracketright, braceright, U05B2	]}; // Hataf Patah; Mirrored
-    key <AD12> { [ bracketleft,  braceleft,  U05BF	]}; // Rafe; Mirrored
-
+    key <AB01> { [ hebrew_zain,	Z		]       };
+    key <AB02> { [ hebrew_samech, X,	U05B6	]       };  // Segol
+    key <AB03> { [ hebrew_bet,	C,	U05B1	]       };  // Hataf Segol
+    key <AB04> { [ hebrew_he,	V		]       };
+    key <AB05> { [ hebrew_nun,	B,	empty,	U05C6	]}; // Nun Hafukha
+    key <AB06> { [ hebrew_mem,	N		]	};
+    key <AB07> { [ hebrew_zade,	M,	U05B5	]	};  // Tsere
+    key <AB08> { [ hebrew_taw,	greater,	rightsinglequotemark	]}; // Mirrored
+    key <AB09> { [ hebrew_finalzade,	less,	singlelowquotemark	]}; // Mirrored
+    
     key <AC01> { [ hebrew_shin,	A,	U05B0	]	};  // Shva
     key <AC02> { [ hebrew_dalet,S,	U05BC	]       };  // Dagesh
     key <AC03> { [ hebrew_gimel,D		]       };
@@ -37,22 +34,31 @@ xkb_symbols "basic" {
     key <AC08> { [ hebrew_lamed, K		]	};
     key <AC09> { [ hebrew_finalkaph,	L,	rightdoublequotemark	]};
     key <AC10> { [ hebrew_finalpe,	colon,	doublelowquotemark	]};
-    key <AC11> { [ comma,	quotedbl,	U05F4]	};  // Gershayim
 
-    key <AB01> { [ hebrew_zain,	Z		]       };
-    key <AB02> { [ hebrew_samech, X,	U05B6	]       };  // Segol
-    key <AB03> { [ hebrew_bet,	C,	U05B1	]       };  // Hataf Segol
-    key <AB04> { [ hebrew_he,	V		]       };
-    key <AB05> { [ hebrew_nun,	B,	empty,	U05C6	]}; // Nun Hafukha
-    key <AB06> { [ hebrew_mem,	N		]	};
-    key <AB07> { [ hebrew_zade,	M,	U05B5	]	};  // Tsere
-    key <AB08> { [ hebrew_taw,	greater,	rightsinglequotemark	]}; // Mirrored
-    key <AB09> { [ hebrew_finalzade,	less,	singlelowquotemark	]}; // Mirrored
+    key <AD01> { [ slash,	Q,	U05C2	]	};  // Sin Dot
+    key <AD02> { [ apostrophe,	W,	U05C1	]	};  // Shin Dot
+    key <AD03> { [ hebrew_qoph,	E,	U05B8	]	};  // Qamats
+    key <AD04> { [ hebrew_resh,	R,	U05B3	]	};  // Hataf Qamats
+    key <AD05> { [ hebrew_aleph,T		]       };
+    key <AD06> { [ hebrew_tet,	Y,	U05F0	]       };  // Yiddish Double Vav
+    key <AD07> { [ hebrew_waw,	U,	U05B9	]       };  // Holam
+    key <AD08> { [ hebrew_finalnun,	I	]       };
+    key <AD09> { [ hebrew_finalmem,	O	]       };
+    key <AD10> { [ hebrew_pe,	P,	U05B7	]	};  // Patah
+
+    key.type[Group1] = "FOUR_LEVEL";
+
+    // Non-alphanumeric keys
     key <AB10> { [ period,	question,  division	]};
-    
+    key <AC11> { [ comma,	quotedbl,	U05F4]	};  // Gershayim
+    key <AD11> { [ bracketright, braceright, U05B2	]}; // Mirrored; Hataf Patah
+    key <AD12> { [ bracketleft,  braceleft,  U05BF	]}; // Mirrored; Rafe
+    key <BKSL> { [ backslash,    bar,  U05BB	]	};  // Qubuts
+
+    // Top (digits) row    
     key <TLDE> { [ semicolon,	asciitilde,	U05F3	]}; // Geresh
-    key <AE01> { [     1,	exclam	]}; 
-    key <AE02> { [     2,	at	]};
+    key <AE01> { [     1,	exclam	]		}; 
+    key <AE02> { [     2,	at	]		};
     key <AE03> { [     3, 	numbersign,	U20AC	]}; // Euro Sign
     key <AE04> { [     4, 	dollar,		U20AA	]}; // New Sheqel Sign
     key <AE05> { [     5,	percent,	degree	]};
@@ -62,10 +68,7 @@ xkb_symbols "basic" {
     key <AE09> { [     9,	parenright,	U200E	]}; // LRM; Paren Mirrored
     key <AE10> { [     0,	parenleft,	U200F	]}; // RLM; Paren Mirrored
     key <AE11> { [ minus,	underscore,	U05BE	]}; // Maqaf
-    key <AE12> { [ equal, 	plus,		endash	]};
-  
-                                      
-    key <BKSL> { [ backslash,    bar,  U05BB	]	};  // Qubuts    
+    key <AE12> { [ equal, 	plus,		endash	]};                 
 
     include "level3(ralt_switch)"
 };
