@@ -18,11 +18,11 @@ xkb_symbols "basic" {
     key <AB02> { [ hebrew_samech, X,	U05B6	]       };  // Segol
     key <AB03> { [ hebrew_bet,	C,	U05B1	]       };  // Hataf Segol
     key <AB04> { [ hebrew_he,	V		]       };
-    key <AB05> { [ hebrew_nun,	B,	empty,	U05C6	]}; // Nun Hafukha
+    key <AB05> { [ hebrew_nun,	B,	NoSymbol,	U05C6	]}; // Nun Hafukha
     key <AB06> { [ hebrew_mem,	N		]	};
     key <AB07> { [ hebrew_zade,	M,	U05B5	]	};  // Tsere
-    key <AB08> { [ hebrew_taw,	greater,	rightsinglequotemark	]}; // Mirrored
-    key <AB09> { [ hebrew_finalzade,	less,	singlelowquotemark	]}; // Mirrored
+    key <AB08> { [ hebrew_taw,	greater,	rightsinglequotemark	]}; // greater Mirrored
+    key <AB09> { [ hebrew_finalzade,	less,	singlelowquotemark	]}; // less Mirrored
     
     key <AC01> { [ hebrew_shin,	A,	U05B0	]	};  // Shva
     key <AC02> { [ hebrew_dalet,S,	U05BC	]       };  // Dagesh
@@ -59,8 +59,8 @@ xkb_symbols "basic" {
     key <TLDE> { [ semicolon,	asciitilde,	U05F3	]}; // Geresh
     key <AE01> { [     1,	exclam	]		}; 
     key <AE02> { [     2,	at	]		};
-    key <AE03> { [     3, 	numbersign,	U20AC	]}; // Euro Sign
-    key <AE04> { [     4, 	dollar,		U20AA	]}; // New Sheqel Sign
+    key <AE03> { [     3, 	numbersign,	EuroSign	]};
+    key <AE04> { [     4, 	dollar,		NewSheqelSign	]};
     key <AE05> { [     5,	percent,	degree	]};
     key <AE06> { [     6, 	asciicircum,	U05AB	]}; // Hebrew Accent Ole
     key <AE07> { [     7,	ampersand,	U05BD	]}; // Meteg
